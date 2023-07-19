@@ -1,0 +1,45 @@
+{
+  "name": "common-use-cli",
+  "version": "1.0.0",
+  "description": "common-use-cli",
+  "main": "index.js",
+  "bin": {
+    "comuse": "bin/cli.js"
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "pre-commit": "lint-staged",
+    "lint": "eslint . --ext .js,.ts --fix"
+  },
+  "author": "张锐",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "4",
+    "commander": "^11.0.0",
+    "ejs": "^3.1.9",
+    "global": "^4.4.0",
+    "inquirer": "8",
+    "ora": "5",
+    "rimraf": "^5.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.9",
+    "@babel/eslint-parser": "^7.22.9",
+    "@commitlint/cli": "^17.6.6",
+    "@commitlint/config-conventional": "^17.6.6",
+    "eslint": "^8.44.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
+    "prettier": "^3.0.0"
+  },
+  "lint-staged": {
+    "*.{js,ts}": "npm run lint",
+    "*.{js,ts,md,json}": [
+      "prettier --write"
+    ]
+  },
+  "engines": {
+    "node": ">=16",
+    "npm": ">=8"
+  }
+}

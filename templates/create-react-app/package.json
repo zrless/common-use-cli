@@ -1,0 +1,48 @@
+{
+  "name": "<%= projectName %>",
+  "version": "1.0.0",
+  "description": "<%= title %>",
+  "private": true,
+  "dependencies": {
+    "@ant-design/icons": "^5.1.4",
+    "antd": "^5.6.0",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4",
+    "query-string": "^8.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.4.3",
+    "web-vitals": "^2.1.0"
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-scripts eject",
+    "pre-commit": "lint-staged",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix"
+  },
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx}": "npm run lint",
+    "*.{js,ts,jsx,tsx,less,md,json}": [
+      "prettier --write"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
